@@ -7,7 +7,7 @@ const getTheme = (mode: PaletteMode) =>
     palette: {
       mode,
       primary: {
-        main: "#6A0DAD", // Roxo
+        main: "#257cc1", // Azul
       },
       secondary: {
         main: "#20B2AA", // Verde-água
@@ -18,7 +18,7 @@ const getTheme = (mode: PaletteMode) =>
       },
       text: {
         primary: mode === "dark" ? "#ffffff" : "#000000",
-        secondary: mode === "dark" ? "#20B2AA" : "#6A0DAD",
+        secondary: mode === "dark" ? "#257cc1" : "#257cc1",
       },
     },
     typography: {
