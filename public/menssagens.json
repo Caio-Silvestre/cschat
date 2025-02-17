@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "tipo": "saida",
+    "remetente": "João",
+    "imagem": "https://exemplo.com/imagens/joao.jpg",
+    "mensagem": "Oi, tudo bem?",
+    "data_envio": "2025-02-16T14:30:10Z"
+  },
+  {
+    "id": 2,
+    "tipo": "entrada",
+    "remetente": "Maria",
+    "imagem": "https://exemplo.com/imagens/maria.jpg",
+    "mensagem": "Oi João! Tudo ótimo e você?",
+    "data_envio": "2025-02-16T14:30:20Z"
+  },
+  {
+    "id": 3,
+    "tipo": "saida",
+    "remetente": "João",
+    "imagem": "https://exemplo.com/imagens/joao.jpg",
+    "mensagem": "Também estou bem, obrigado!",
+    "data_envio": "2025-02-16T14:30:35Z"
+  },
+  {
+    "id": 4,
+    "tipo": "entrada",
+    "remetente": "Maria",
+    "imagem": "https://exemplo.com/imagens/maria.jpg",
+    "mensagem": "Que bom! Como foi seu dia?",
+    "data_envio": "2025-02-16T14:30:50Z"
+  },
+  {
+    "id": 5,
+    "tipo": "saida",
+    "remetente": "João",
+    "imagem": "https://exemplo.com/imagens/joao.jpg",
+    "mensagem": "Foi puxado... Passei o dia tentando resolver um problema no React.",
+    "data_envio": "2025-02-16T14:31:10Z"
+  },
+  {
+    "id": 6,
+    "tipo": "entrada",
+    "remetente": "Maria",
+    "imagem": "https://exemplo.com/imagens/maria.jpg",
+    "mensagem": "Sério? O que aconteceu?",
+    "data_envio": "2025-02-16T14:31:25Z"
+  },
+  {
+    "id": 7,
+    "tipo": "saida",
+    "remetente": "João",
+    "imagem": "https://exemplo.com/imagens/joao.jpg",
+    "mensagem": "Eu estava tentando manipular o estado, mas o componente não atualizava corretamente.",
+    "data_envio": "2025-02-16T14:31:40Z"
+  },
+  {
+    "id": 8,
+    "tipo": "entrada",
+    "remetente": "Maria",
+    "imagem": "https://exemplo.com/imagens/maria.jpg",
+    "mensagem": "Ah, já passei por isso. Você estava usando `useState`?",
+    "data_envio": "2025-02-16T14:31:55Z"
+  },
+  {
+    "id": 9,
+    "tipo": "saida",
+    "remetente": "João",
+    "imagem": "https://exemplo.com/imagens/joao.jpg",
+    "mensagem": "Sim! Mas mesmo chamando `setState`, a interface não refletia as mudanças.",
+    "data_envio": "2025-02-16T14:32:10Z"
+  },
+  {
+    "id": 10,
+    "tipo": "entrada",
+    "remetente": "Maria",
+    "imagem": "https://exemplo.com/imagens/maria.jpg",
+    "mensagem": "Você conferiu se o valor realmente mudou antes de tentar atualizar?",
+    "data_envio": "2025-02-16T14:32:25Z"
+  },
+  {
+    "id": 11,
+    "tipo": "saida",
+    "remetente": "João",
+    "imagem": "https://exemplo.com/imagens/joao.jpg",
+    "mensagem": "Pois é, descobri que o React não re-renderiza se o estado for o mesmo!",
+    "data_envio": "2025-02-16T14:32:40Z"
+  },
+  {
+    "id": 12,
+    "tipo": "entrada",
+    "remetente": "Maria",
+    "imagem": "https://exemplo.com/imagens/maria.jpg",
+    "mensagem": "Exato! Às vezes, precisa usar um `useEffect` para forçar a atualização.",
+    "data_envio": "2025-02-16T14:32:55Z"
+  },
+  {
+    "id": 13,
+    "tipo": "saida",
+    "remetente": "João",
+    "imagem": "https://exemplo.com/imagens/joao.jpg",
+    "mensagem": "Foi isso que fiz! Agora está funcionando!",
+    "data_envio": "2025-02-16T14:33:10Z"
+  },
+  {
+    "id": 14,
+    "tipo": "entrada",
+    "remetente": "Maria",
+    "imagem": "https://exemplo.com/imagens/maria.jpg",
+    "mensagem": "Que bom! React tem essas pegadinhas...",
+    "data_envio": "2025-02-16T14:33:25Z"
+  },
+  {
+    "id": 15,
+    "tipo": "saida",
+    "remetente": "João",
+    "imagem": "https://exemplo.com/imagens/joao.jpg",
+    "mensagem": "Sim! Outra coisa que me confundiu foi o `useEffect` rodando infinitamente.",
+    "data_envio": "2025-02-16T14:33:40Z"
+  },
+  {
+    "id": 16,
+    "tipo": "entrada",
+    "remetente": "Maria",
+    "imagem": "https://exemplo.com/imagens/maria.jpg",
+    "mensagem": "Isso acontece quando a dependência está errada no array do `useEffect`!",
+    "data_envio": "2025-02-16T14:33:55Z"
+  },
+  {
+    "id": 17,
+    "tipo": "saida",
+    "remetente": "João",
+    "imagem": "https://exemplo.com/imagens/joao.jpg",
+    "mensagem": "Exatamente! Eu estava atualizando o estado dentro do próprio `useEffect` sem dependências corretas.",
+    "data_envio": "2025-02-16T14:34:10Z"
+  },
+  {
+    "id": 18,
+    "tipo": "entrada",
+    "remetente": "Maria",
+    "imagem": "https://exemplo.com/imagens/maria.jpg",
+    "mensagem": "Aí vira um loop infinito! Mas bom que você pegou o jeito.",
+    "data_envio": "2025-02-16T14:34:25Z"
+  },
+  {
+    "id": 19,
+    "tipo": "saida",
+    "remetente": "João",
+    "imagem": "https://exemplo.com/imagens/joao.jpg",
+    "mensagem": "Sim! Agora vou testar melhor antes de sair colocando código aleatório. 😂",
+    "data_envio": "2025-02-16T14:34:40Z"
+  },
+  {
+    "id": 20,
+    "tipo": "entrada",
+    "remetente": "Maria",
+    "imagem": "https://exemplo.com/imagens/maria.jpg",
+    "mensagem": "Boa! Aprender com os erros é o melhor caminho. 🚀",
+    "data_envio": "2025-02-16T14:34:55Z"
+  }
+]
