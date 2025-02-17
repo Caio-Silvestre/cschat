@@ -1,13 +1,9 @@
-// src/types/index.ts
-
-// Interface para o participante da conversa
 export interface Participante {
   id: string;
   nome: string;
   imagem: string;
 }
 
-// Interface para as mensagens
 export interface Mensagem {
   id: number;
   tipo: "entrada" | "saida";
@@ -17,10 +13,15 @@ export interface Mensagem {
   data_envio: string;
 }
 
-// Interface para as informações gerais da conversa
+export interface Dono {
+  id: string;
+  nome: string;
+  imagem: string;
+}
+
 export interface Conversa {
   conversa_id: string;
-  participantes: Participante[];
+  dono: Dono;
   inicio: string;
   ultimo_update: string;
   mensagens_total: number;

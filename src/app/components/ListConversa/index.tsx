@@ -1,36 +1,26 @@
 "use client";
 import React, { Fragment, useEffect, useState } from "react";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import Divider from "@mui/material/Divider";
-import ListItemText from "@mui/material/ListItemText";
-import ListItemAvatar from "@mui/material/ListItemAvatar";
-import Avatar from "@mui/material/Avatar";
-import Typography from "@mui/material/Typography";
-import { Conversa } from "./interfaces";
+import {
+  List,
+  ListItemButton,
+  ListItemAvatar,
+  ListItemText,
+  Avatar,
+  Divider,
+  Typography,
+} from "@mui/material";
 import axios from "axios";
-
-interface Dono {
-  id: string;
-  nome: string;
-  imagem: string;
-}
-
-interface Conversa {
-  conversa_id: string;
-  dono: Dono;
-  inicio: string;
-  ultimo_update: string;
-  mensagens_total: number;
-}
+import { dataFormatada } from "@/app/utils";
+import { Conversa } from "./interfaces";
 
 const ListConversa: React.FC = () => {
-  const [dadosConversa, setDadosCovnersa] = useState<Conversa | null>(null);
+  const [dadosConversa, setDadosConversa] = useState<Conversa[]>([]);
+
   const getConversa = () => {
     axios
-      .get<Conversa>("/conversa.json")
+      .get<Conversa[]>("/conversa.json")
       .then((response) => {
-        setDadosCovnersa(response.data);
+        setDadosConversa(response.data);
       })
       .catch((error) => {
         console.error("Erro ao carregar o JSON:", error);
@@ -42,29 +32,47 @@ const ListConversa: React.FC = () => {
   }
 
   return (
-    <List sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}>
+    <List
+      sx={{
+        width: "100%",
+        maxHeight: "90vh",
+        maxWidth: 360,
+        bgcolor: "background.paper",
+        overflow: "auto",
+      }}
+    >
       {dadosConversa?.map((conversa: Conversa) => (
         <Fragment key={conversa.dono.id}>
-          <ListItem alignItems="flex-start">
+          <ListItemButton
+            alignItems="flex-start"
+            selected={false}
+            onClick={(event) => {
+              event.preventDefault();
+              console.log("Click conversa");
+            }}
+          >
             <ListItemAvatar>
               <Avatar alt={conversa.dono.nome} src={conversa.dono.imagem} />
             </ListItemAvatar>
             <ListItemText
               primary={conversa.dono.nome}
+              sx={{ color: "text.primary" }}
               secondary={
-                <React.Fragment>
+                <Fragment>
                   <Typography
                     component="span"
                     variant="body2"
                     sx={{ color: "text.primary", display: "inline" }}
                   >
-                    {conversa.dono.nome} {/* Nome do participante */}
+                    {dataFormatada(conversa.ultimo_update)}{" "}
+                    {/* Nome do participante */}
                   </Typography>
-                  {" — Participante na conversa"}
-                </React.Fragment>
+                  {" — Última mensagem"}
+                </Fragment>
               }
             />
-          </ListItem>
+          </ListItemButton>
+
           <Divider variant="inset" component="li" />
         </Fragment>
       ))}
