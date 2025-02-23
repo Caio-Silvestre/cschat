@@ -20,6 +20,7 @@ export default function ThemeRegistry({ children }: { children: ReactNode }) {
           padding: "8px 16px",
           borderRadius: 8,
           cursor: "pointer",
+          zIndex: "10",
         }}
       >
         {mode === "light" ? "🌙 Dark" : "☀️ Light"}

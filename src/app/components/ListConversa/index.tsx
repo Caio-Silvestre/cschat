@@ -1,17 +1,15 @@
 "use client";
 import React, { Fragment, useEffect, useState } from "react";
-import {
-  List,
-  ListItemButton,
-  ListItemAvatar,
-  ListItemText,
-  Avatar,
-  Divider,
-  Typography,
-} from "@mui/material";
+import List from "@mui/material/List";
+import Divider from "@mui/material/Divider";
+import ListItemText from "@mui/material/ListItemText";
+import ListItemAvatar from "@mui/material/ListItemAvatar";
+import Avatar from "@mui/material/Avatar";
+import Typography from "@mui/material/Typography";
 import axios from "axios";
 import { dataFormatada } from "@/app/utils";
 import { Conversa } from "./interfaces";
+import { ListItemButton } from "@mui/material";
 
 const ListConversa: React.FC = () => {
   const [dadosConversa, setDadosConversa] = useState<Conversa[]>([]);
@@ -36,13 +34,13 @@ const ListConversa: React.FC = () => {
       sx={{
         width: "100%",
         maxHeight: "90vh",
-        maxWidth: 360,
         bgcolor: "background.paper",
         overflow: "auto",
+        borderRadius: "15px",
       }}
     >
-      {dadosConversa?.map((conversa: Conversa) => (
-        <Fragment key={conversa.dono.id}>
+      {dadosConversa?.map((conversa: Conversa, key: number) => (
+        <Fragment key={key}>
           <ListItemButton
             alignItems="flex-start"
             selected={false}

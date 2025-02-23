@@ -1,20 +1,26 @@
 import ListConversa from "./components/ListConversa";
 import React from "react";
+import ListMensagem from "./components/ListMensagens";
+import ChatTextArea from "./components/ChatTextArea";
 
 export default function Home() {
   return (
-    <div>
+    <div className="h-[90svh]">
       {/* Grid com duas colunas */}
-      <div className=" bg-green-500 grid grid-cols-4 gap-4 w-full">
+      <div className="flex flex-row w-full">
         {/* Coluna 1 (1/4) */}
-        <div className="col-span-1 p-3 text-white">
+        <div className="w-[20%] p-3">
           <ListConversa />
         </div>
 
         {/* Coluna 2 (3/4) */}
-        <div className="col-span-3 p-4 text-white">
-          <h2>Coluna 2</h2>
-          <p>Conteúdo da coluna 2 (3/4 da largura)</p>
+        <div className="w-[80%] p-3">
+          <div className="h-[70svh] ">
+            <ListMensagem />
+          </div>
+          <div className="mt-[1svh] h-[19svh]">
+            <ChatTextArea />
+          </div>
         </div>
       </div>
     </div>

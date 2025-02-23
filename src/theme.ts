@@ -14,11 +14,12 @@ const getTheme = (mode: PaletteMode) =>
       },
       background: {
         default: mode === "dark" ? "#000000" : "#ffffff",
-        paper: mode === "dark" ? "#121212" : "#f5f5f5",
+        paper:
+          mode === "dark" ? "rgba(0, 0, 0, 70%)" : "rgba(214, 214, 214, 90%)",
       },
       text: {
         primary: mode === "dark" ? "#ffffff" : "#000000",
-        secondary: mode === "dark" ? "#257cc1" : "#257cc1",
+        secondary: mode === "dark" ? "#000000" : "#ffffff",
       },
     },
     typography: {
